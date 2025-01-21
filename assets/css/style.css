@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #1a1a1a;
+    color: white;
+}
+
+.game-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+    background: #fff;
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.timer {
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.game-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.word-row {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.letter-box {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #666;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: #003366; /* Bleu foncé */
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.letter-box.correct {
+    background: #ff0000; /* Rouge */
+    border-color: #ff0000;
+    animation: flip 0.5s;
+}
+
+.letter-box.wrong-position {
+    background: #ffd700; /* Jaune */
+    border-color: #ffd700;
+    color: black;
+    animation: flip 0.5s;
+}
+
+.letter-box.incorrect {
+    background: #003366; /* Bleu foncé */
+    border-color: #004477;
+    animation: flip 0.5s;
+}
+
+/* Styles supplémentaires */
+.letter-box.revealed {
+    background-color: #ff0000;
+    color: white;
+    border-color: #ff0000;
+    animation: reveal 0.5s ease-out;
+}
+
+/* Animations */
+@keyframes flip {
+    0% { transform: rotateX(0); }
+    50% { transform: rotateX(90deg); }
+    100% { transform: rotateX(0); }
+}
+
+@keyframes reveal {
+    0% { transform: scale(0.1); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.input-zone {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    justify-content: center;
+}
+
+#word-input {
+    padding: 10px 15px;
+    font-size: 20px;
+    width: 200px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+}
+
+#submit-word {
+    padding: 10px 20px;
+    font-size: 20px;
+    background: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#submit-word:hover {
+    background: #cc0000;
+}
+
+.player-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+.current-player {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
