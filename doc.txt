@@ -1,0 +1,19 @@
+cependant maintenant il y a un problème : comme tu peux le voir sur l'image, quand une lettre se révèle (en rouge) elle ne se révèle pas sur la deuxième ligne en plus de la lettre déjà révélée (o et t) t se révèle sur toutes les lignes d'un coup au lieu d'une seule et o ne se révèle plus sur les autres lignes alors qu'il est censé déjà être trouvé.
+
+aussi quand j'écris dans les cases il y a quelques bugs : parfois ça change les lettres en rouge et parfois ça n'écrit plus, bizarre corrige tous ces trucs pour que ça soit parfaitement fonctionnel, sinon le reste visuellement et tout c'est super
+
+
+
+
+Les lettres bien placées à la ligne précédente doivent réapparaître sur fond bleu foncé sur la nouvelle ligne.
+Une fois qu'une lettre est retapée, son fond devient bleu clair pour montrer qu'elle est en cours d'écriture.
+Les lettres correctement placées à la validation doivent apparaître en rouge.
+Rétroaction intuitive :
+
+Dès qu'une ligne est soumise, une nouvelle ligne apparaît avec les lettres déjà trouvées affichées sur fond bleu.
+Les lettres mal placées ou non présentes sont ignorées pour la ligne suivante, mais elles sont toujours affichées dans le contexte visuel.
+Soumission de mots :
+
+Chaque soumission doit vérifier si le mot respecte les règles : bonne longueur, pas d'erreur dans la syntaxe, etc.
+Le jeu s'arrête si le mot est trouvé, sinon on continue jusqu'à 6 tentatives.
+Je vais réviser l'implémentation du code pour intégrer un affichage fidèle à ces attentes et qui se comporte exactement comme dans le jeu Motus. Je te partage une version complète et intuitive.
